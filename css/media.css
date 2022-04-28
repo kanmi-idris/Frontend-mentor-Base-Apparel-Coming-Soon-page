@@ -1,0 +1,53 @@
+@media only screen and (min-width: 700px) {
+  .logo {
+    position: absolute;
+    right: 0;
+    top: 5%;
+  }
+  .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    padding-block: 0;
+    background-image: url(/images/bg-pattern-desktop.svg);
+    background-size: cover;
+  }
+  .hero-img {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/images/hero-desktop.jpg);
+  }
+  .text {
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    padding-left: 10%;
+  }
+  .text .heading {
+    font-size: 3rem;
+  }
+  .text .info {
+    padding-inline: 0;
+    font-size: .8rem;
+    padding-right: 8rem;
+  }
+  .email-request form {
+    position: absolute;
+    bottom: 14%;
+    left: 10%;
+  }
+  .email-request button {
+    position: relative;
+    left: -4%;
+    -webkit-transform: translateY(9%);
+            transform: translateY(9%);
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .email-request input {
+    padding-right: 2rem;
+  }
+}
+/*# sourceMappingURL=media.css.map */

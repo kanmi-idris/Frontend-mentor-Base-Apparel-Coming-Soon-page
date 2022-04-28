@@ -1,0 +1,133 @@
+/*Mobile Styles*/
+
+.container {
+    width: 100%;
+    padding-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logo {
+    background-image: url(/images/logo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 90%;
+    height: 2rem;
+    margin: .9rem 0;
+}
+
+.hero-img {
+    width: 100%;
+    height: 250px;
+    background-image: url(/images/hero-mobile.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+/*Typography*/
+.text {
+    padding: 2rem 0;
+    padding-bottom: 1.5rem;
+    text-align: center;
+
+    .heading {
+        color: var(--Desaturated-Red);
+        text-transform: uppercase;
+        letter-spacing: .4rem;
+        font-size: 25px;
+        font-weight: var(--heavyWeight);
+
+        span {
+            color: var(--Dark-Grayish-Red);
+        }
+    }
+
+    .info {
+        padding-inline: .8rem;
+        padding-top: 1rem;
+        color: var(--Desaturated-Red);
+        
+    }
+}
+/*form to accept emails*/
+.email-request {
+
+    form {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    input {
+        padding: .7rem;
+        padding-right: 10rem;
+        border-radius: 2rem;
+        position: relative;
+        border: .1px solid var(--Desaturated-Red);
+        outline: none;
+    }
+
+    input::placeholder {
+        color: var(--Desaturated-Red);
+        opacity: .8;
+        padding-left: 14px;
+    }
+
+    button {
+        cursor: pointer;
+        border-radius: 50px;
+        height: 2.5rem;
+        width: 3.5rem;
+        background-image: linear-gradient(135deg, 
+        hsl(0, 80%, 86%), 
+        hsl(0, 74%, 74%));
+        position: absolute;
+        right: 0;
+        outline: none;
+        border: none;
+        box-shadow: 0px 0px 18px 1px hsla(0, 52%, 70%, 0.466);
+
+        img {
+            height: 1.4em;
+        }
+    }
+
+    button:hover {
+        box-shadow: 0px 0px 13px 2px var(--Desaturated-Red);
+    }
+}
+
+/*to help display error*/
+
+form {
+    .error-icon {
+        display: none;
+        position: absolute;
+        top: 15%;
+        right: 60px;
+    }
+
+    .error-text {
+        font-size: .7rem;
+        padding-left: 28px;
+        color: var(--Soft-Red);
+        display: none;
+        
+    }
+}
+
+
+/* js modified to allow error wording*/
+.email-request form.error .error-icon {
+    display: inline-block;
+}
+
+.email-request form.error .error-text {
+    display: block;
+}
+
+.email-request form.error input{
+    border: 2px solid var(--Soft-Red);
+}

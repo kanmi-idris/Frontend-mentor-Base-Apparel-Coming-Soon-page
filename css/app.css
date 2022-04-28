@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,500;1,700&display=swap");
+/*Mobile Styles*/
+.container {
+  width: 100%;
+  padding-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.logo {
+  background-image: url(/images/logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 90%;
+  height: 2rem;
+  margin: .9rem 0;
+}
+
+.hero-img {
+  width: 100%;
+  height: 250px;
+  background-image: url(/images/hero-mobile.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/*Typography*/
+.text {
+  padding: 2rem 0;
+  padding-bottom: 1.5rem;
+  text-align: center;
+}
+
+.text .heading {
+  color: var(--Desaturated-Red);
+  text-transform: uppercase;
+  letter-spacing: .4rem;
+  font-size: 25px;
+  font-weight: var(--heavyWeight);
+}
+
+.text .heading span {
+  color: var(--Dark-Grayish-Red);
+}
+
+.text .info {
+  padding-inline: .8rem;
+  padding-top: 1rem;
+  color: var(--Desaturated-Red);
+}
+
+/*form to accept emails*/
+.email-request form {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.email-request input {
+  padding: .7rem;
+  padding-right: 10rem;
+  border-radius: 2rem;
+  position: relative;
+  border: 0.1px solid var(--Desaturated-Red);
+  outline: none;
+}
+
+.email-request input::-webkit-input-placeholder {
+  color: var(--Desaturated-Red);
+  opacity: .8;
+  padding-left: 14px;
+}
+
+.email-request input:-ms-input-placeholder {
+  color: var(--Desaturated-Red);
+  opacity: .8;
+  padding-left: 14px;
+}
+
+.email-request input::-ms-input-placeholder {
+  color: var(--Desaturated-Red);
+  opacity: .8;
+  padding-left: 14px;
+}
+
+.email-request input::placeholder {
+  color: var(--Desaturated-Red);
+  opacity: .8;
+  padding-left: 14px;
+}
+
+.email-request button {
+  cursor: pointer;
+  border-radius: 50px;
+  height: 2.5rem;
+  width: 3.5rem;
+  background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  position: absolute;
+  right: 0;
+  outline: none;
+  border: none;
+  -webkit-box-shadow: 0px 0px 18px 1px rgba(218, 139, 139, 0.466);
+          box-shadow: 0px 0px 18px 1px rgba(218, 139, 139, 0.466);
+}
+
+.email-request button img {
+  height: 1.4em;
+}
+
+.email-request button:hover {
+  -webkit-box-shadow: 0px 0px 13px 2px var(--Desaturated-Red);
+          box-shadow: 0px 0px 13px 2px var(--Desaturated-Red);
+}
+
+/*to help display error*/
+form .error-icon {
+  display: none;
+  position: absolute;
+  top: 15%;
+  right: 60px;
+}
+
+form .error-text {
+  font-size: .7rem;
+  padding-left: 28px;
+  color: var(--Soft-Red);
+  display: none;
+}
+
+/* js modified to allow error wording*/
+.email-request form.error .error-icon {
+  display: inline-block;
+}
+
+.email-request form.error .error-text {
+  display: block;
+}
+
+.email-request form.error input {
+  border: 2px solid var(--Soft-Red);
+}
+
+@media only screen and (min-width: 700px) {
+  .logo {
+    position: absolute;
+    right: 0;
+    top: 5%;
+  }
+  .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    padding-block: 0;
+    background-image: url(/images/bg-pattern-desktop.svg);
+    background-size: cover;
+  }
+  .hero-img {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/images/hero-desktop.jpg);
+  }
+  .text {
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    padding-left: 10%;
+  }
+  .text .heading {
+    font-size: 3rem;
+  }
+  .text .info {
+    padding-inline: 0;
+    font-size: .8rem;
+    padding-right: 8rem;
+  }
+  .email-request form {
+    position: absolute;
+    bottom: 14%;
+    left: 10%;
+  }
+  .email-request button {
+    position: relative;
+    left: -4%;
+    -webkit-transform: translateY(9%);
+            transform: translateY(9%);
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .email-request input {
+    padding-right: 2rem;
+  }
+}
+
+:root {
+  /*Primary*/
+  --Desaturated-Red: hsl(0, 36%, 70%);
+  --Soft-Red: hsl(0, 93%, 68%);
+  /*Neutral*/
+  --Dark-Grayish-Red: hsl(0, 6%, 24%);
+  --Font-size: 16px;
+  --lightWeight: 300;
+  --felterWeight: 400;
+  --heavyWeight: 600;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: var(--Font-size);
+}
+
+/*Attribution*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=app.css.map */
